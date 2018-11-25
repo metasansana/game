@@ -4,7 +4,7 @@ import { Engine } from './game/engine';
 import { Button, Controller } from './game/controller';
 import { Sounds } from './game/sounds';
 
-let s = system({ log: { level: 8 } });
+let s = system({ log: { level: 5 } });
 let canvas = <HTMLCanvasElement>document.getElementById('screen');
 
 let buttons = <[Button, Button, Button]>[

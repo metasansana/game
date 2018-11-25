@@ -7,7 +7,6 @@ import { Avatar } from './avatar';
 import { Message as ControllerMessage, Turn, Advance, Fire } from '../controller';
 import { Shot } from './shot';
 import { Point } from './point';
-import { PLAY } from './sound';
 
 const ORIGIN_X = 1;
 const ORIGIN_Y = 1;
@@ -85,20 +84,14 @@ export class Engine<M> extends Immutable<Message<M>, Context> {
 
     }
 
-    sendTurn = (t: Turn) => {
+    sendTurn = (t: Turn) => 
         this.tell(this.bridge[t.actor], t);
-        this.tell('sounds/turn', PLAY);
-    }
-
-    sendAdvance = (a: Advance) => {
+    
+    sendAdvance = (a: Advance) => 
         this.tell(this.bridge[a.actor], a);
-        this.tell('sounds/advance', PLAY);
-    }
 
-    sendFire = (a: Fire) => {
+    sendFire = (a: Fire) => 
         this.tell(this.bridge[a.actor], a);
-        this.tell('sounds/fire', PLAY);
-    }
 
     spawnShot = ({ point, originX, originY, avatar }: ShotGen) => {
 

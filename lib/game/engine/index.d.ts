@@ -46,9 +46,9 @@ export declare class Engine<M> extends Immutable<Message<M>, Context> {
         [key: string]: Address;
     };
     regenerateAvatar: ({ actor }: Regen) => void;
-    sendTurn: (t: Turn) => void;
-    sendAdvance: (a: Advance) => void;
-    sendFire: (a: Fire) => void;
+    sendTurn: (t: Turn) => import("@quenk/potoo/lib/actor/resident").AbstractResident<Context>;
+    sendAdvance: (a: Advance) => import("@quenk/potoo/lib/actor/resident").AbstractResident<Context>;
+    sendFire: (a: Fire) => import("@quenk/potoo/lib/actor/resident").AbstractResident<Context>;
     spawnShot: ({ point, originX, originY, avatar }: ShotGen) => void;
     receive: Case<Message<M>>[];
     run(): void;
