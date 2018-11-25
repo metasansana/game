@@ -1,0 +1,86 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Gary Against More Enemies</title>
+    <meta name="description" content="Example tank using actors">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content=0 />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #929292;
+        }
+
+        .screen {
+            margin: 0 auto;
+            display: block;
+            padding: 5px;
+            background-color: #9bbc0f;
+            border: 1px solid #000;
+        }
+
+        .pad {
+            max-width: 312px;
+            margin: 0 auto;
+            clear: both;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 30pt;
+            font-family: 'Press Start 2p';
+        }
+
+        .action-button {
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 30px;
+            display: inline-block;
+            box-shadow: 0 .2em #b0a31e;
+            background-color: yellow;
+            margin: 5px;
+            background-color: yellow;
+            background-image: -o-linear-gradient(left top, #e3e6cf 3%, #e9ecdd 22%, #ffd800 99%);
+            background-image: -moz-linear-gradient(left top, #e3e6cf 3%, #e9ecdd 22%, #ffd800 99%);
+            background-image: -webkit-linear-gradient(left top, #e3e6cf 3%, #e9ecdd 22%, #ffd800 99%);
+            background-image: linear-gradient(left top, #e3e6cf 3%, #e9ecdd 22%, #ffd800 99%);
+            padding-left: 5px;
+        }
+
+        .action-button:focus {
+            outline: none;
+        }
+
+        .action-button:active {
+            box-shadow: none;
+            outline: none;
+            position: relative;
+            top: .2em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <canvas id="screen" class="screen" width=300 height=300></canvas>
+
+    <div id="pad" class="pad">
+
+        <button id="button-0" class='action-button'>&InvisibleComma;</button>
+        <button id="button-1" class='action-button'>&InvisibleComma;</button>
+        <button id="button-2" class='action-button'>&InvisibleComma;</button>
+
+    </div>
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
